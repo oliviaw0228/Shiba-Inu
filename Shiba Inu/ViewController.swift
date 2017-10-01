@@ -9,16 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  @IBAction func buttonPressed(_ sender: UIButton) {
+    let data = (sender.titleLabel?.text == "Boys") ? DataSource().boys : DataSource().girls
+    performSegue(withIdentifier: "showDogs", sender: data)
   }
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let dogsTVC = segue.destination as? DogTableViewController
-    if segue.identifier == "dogs.boys" {
-      dogsTVC?.dogs = DataSource().boys
-    }
-    else if segue.identifier == "dogs.girls" {
-      dogsTVC?.dogs = DataSource().girls
+    if segue.identifier == "showDogs" {
+      let dogsTVC = segue.destination as? DogTableViewController
+      dogsTVC?.dogs = sender as! [String:String]
     }
   }
 }

@@ -29,7 +29,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="r7N-FI-cDP" kind="show" identifier="dogs.boys" id="tTL-3o-VbX"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZT-Tl-PSt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y56-Op-fSd">
@@ -40,7 +40,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="r7N-FI-cDP" kind="show" identifier="dogs.girls" id="CMI-az-K3M"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ozF-hp-rQC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,6 +58,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="3Vf-1F-Z0O"/>
+                    <connections>
+                        <segue destination="r7N-FI-cDP" kind="show" identifier="showDogs" id="DTd-j6-uQ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,7 +138,4 @@
             <point key="canvasLocation" x="-334" y="133"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="CMI-az-K3M"/>
-    </inferredMetricsTieBreakers>
 </document>
