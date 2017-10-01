@@ -29,7 +29,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="r7N-FI-cDP" kind="show" id="tTL-3o-VbX"/>
+                                    <segue destination="r7N-FI-cDP" kind="show" identifier="dogs.boys" id="tTL-3o-VbX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y56-Op-fSd">
@@ -39,6 +39,9 @@
                                 <state key="normal" title="Girls">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="r7N-FI-cDP" kind="show" identifier="dogs.girls" id="CMI-az-K3M"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -132,4 +135,7 @@
             <point key="canvasLocation" x="-334" y="133"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CMI-az-K3M"/>
+    </inferredMetricsTieBreakers>
 </document>

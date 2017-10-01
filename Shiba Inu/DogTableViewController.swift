@@ -14,7 +14,7 @@ class DogCell: UITableViewCell {
 
 class DogTableViewController: UITableViewController {
   
-  let boys = DataSource().boys
+  var dogs: [String: String]! = nil
   
   // height
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -23,7 +23,7 @@ class DogTableViewController: UITableViewController {
   
   // how many rows to display
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.boys.count
+    return self.dogs.count
   }
   
   // what does each row look like
@@ -31,12 +31,12 @@ class DogTableViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "DoggyCell") as! DogCell
     
     // set up cell name
-    let dogName = Array(self.boys.keys)[indexPath.row]
+    let dogName = Array(self.dogs.keys)[indexPath.row]
     cell.name.text = dogName
     
     // set up cell image
     DispatchQueue.global().async { // download image in background
-      let imageUrlString = self.boys[dogName]!
+      let imageUrlString = self.dogs[dogName]!
       let url = URL(string: imageUrlString)
       let data = try? Data(contentsOf: url!)
       
