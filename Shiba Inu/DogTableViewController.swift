@@ -47,4 +47,20 @@ class DogTableViewController: UITableViewController {
     return cell
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let dogName = Array(self.dogs.keys)[indexPath.row]
+//    let aletText = dogName + ": Sorry you are too late!"
+    let alertText = "\(dogName): haha nice to you meet you" // formatted string
+    let alert = UIAlertController(title: alertText , message: nil, preferredStyle: UIAlertControllerStyle.alert)
+    let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+    alert.addAction(action)
+    present(alert, animated: true, completion: nil)
+  }
 }
+
+
+
+
+
+
+
