@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x46-kS-5ir">
-                                <rect key="frame" x="72" y="199" width="231" height="138.5"/>
+                                <rect key="frame" x="72" y="199" width="231" height="139"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="Vz7-t9-vfJ"/>
@@ -33,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y56-Op-fSd">
-                                <rect key="frame" x="72" y="417.5" width="231" height="138.5"/>
+                                <rect key="frame" x="72" y="418" width="231" height="139"/>
                                 <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="Girls">
@@ -43,17 +44,44 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ozF-hp-rQC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDO-rf-abO">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="1k4-rG-3dD"/>
+                                    <constraint firstAttribute="height" constant="30" id="Bb0-N1-x2W"/>
+                                </constraints>
+                                <state key="normal" title="Show Map"/>
+                                <connections>
+                                    <segue destination="oMi-31-483" kind="show" id="wlc-D4-1Wl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="y56-Op-fSd" firstAttribute="leading" secondItem="x46-kS-5ir" secondAttribute="leading" id="15F-VC-dpK"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="centerX" secondItem="y56-Op-fSd" secondAttribute="centerX" id="38B-xN-Ti8"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3qT-vS-VY7"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5A0-1Z-XHE"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="637" id="A45-v4-myf"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="centerX" secondItem="x46-kS-5ir" secondAttribute="centerX" id="AIy-Xv-a3S"/>
                             <constraint firstItem="x46-kS-5ir" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="AQx-LZ-ReK"/>
                             <constraint firstItem="x46-kS-5ir" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="135" id="BLo-K9-elK"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CKG-Cq-NaA"/>
                             <constraint firstItem="y56-Op-fSd" firstAttribute="trailing" secondItem="x46-kS-5ir" secondAttribute="trailing" id="Ch5-oT-AQR"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KI7-IW-MYn"/>
+                            <constraint firstAttribute="bottom" secondItem="BDO-rf-abO" secondAttribute="bottom" id="OYh-9q-hg8"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottomMargin" id="asl-wc-bIn"/>
                             <constraint firstItem="x46-kS-5ir" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bzU-rf-6f6"/>
+                            <constraint firstAttribute="bottom" secondItem="BDO-rf-abO" secondAttribute="bottom" id="dM9-zG-UTI"/>
                             <constraint firstItem="y56-Op-fSd" firstAttribute="height" secondItem="x46-kS-5ir" secondAttribute="height" id="e0H-ky-5uB"/>
                             <constraint firstItem="y56-Op-fSd" firstAttribute="top" secondItem="x46-kS-5ir" secondAttribute="bottom" constant="80" id="iVB-YX-SYI"/>
                             <constraint firstItem="y56-Op-fSd" firstAttribute="width" secondItem="x46-kS-5ir" secondAttribute="width" id="lU6-h8-wmv"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pLL-rg-GIR"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pWs-M2-bGV"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qTd-c5-U7E"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tKY-8t-j66"/>
+                            <constraint firstItem="BDO-rf-abO" firstAttribute="top" secondItem="y56-Op-fSd" secondAttribute="bottom" constant="80" id="vTw-dg-adQ"/>
+                            <constraint firstAttribute="trailing" secondItem="BDO-rf-abO" secondAttribute="trailing" id="vb9-UK-p2p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -65,6 +93,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="132.68365817091455"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="8a7-FH-51d">
+            <objects>
+                <viewController id="oMi-31-483" customClass="MapViewController" customModule="Shiba_Inu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LsT-bO-Tp1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xAf-eS-P28">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="603" id="A9s-X4-Q6q"/>
+                                    <constraint firstAttribute="width" constant="375" id="aGS-On-o1q"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="top" secondItem="LsT-bO-Tp1" secondAttribute="top" constant="64" id="179-sh-EnR"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="bottom" secondItem="gGX-nN-VhD" secondAttribute="bottom" id="319-gw-tsB"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="leading" secondItem="LsT-bO-Tp1" secondAttribute="leading" id="6dy-jo-Saf"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="leading" secondItem="LsT-bO-Tp1" secondAttribute="leading" id="Abt-aG-feU"/>
+                            <constraint firstAttribute="trailing" secondItem="xAf-eS-P28" secondAttribute="trailing" id="CLc-rI-vW0"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="top" secondItem="gGX-nN-VhD" secondAttribute="top" id="U8P-8W-pTI"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="top" secondItem="gGX-nN-VhD" secondAttribute="top" id="Zac-pA-zow"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="centerX" secondItem="LsT-bO-Tp1" secondAttribute="centerX" id="Zou-Gk-eSj"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="leading" secondItem="gGX-nN-VhD" secondAttribute="leading" id="dJN-vH-BSM"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="trailing" secondItem="gGX-nN-VhD" secondAttribute="trailing" id="fQ0-Dc-fuR"/>
+                            <constraint firstAttribute="bottom" secondItem="xAf-eS-P28" secondAttribute="bottom" id="gCc-hX-y6m"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="bottom" secondItem="LsT-bO-Tp1" secondAttribute="bottomMargin" id="gx8-6o-Q1L"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="bottom" secondItem="gGX-nN-VhD" secondAttribute="bottom" id="iZ4-kw-wU5"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="leading" secondItem="LsT-bO-Tp1" secondAttribute="leading" id="jHv-P0-r01"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="top" secondItem="LsT-bO-Tp1" secondAttribute="top" constant="64" id="kDQ-7i-6e7"/>
+                            <constraint firstItem="xAf-eS-P28" firstAttribute="top" secondItem="LsT-bO-Tp1" secondAttribute="topMargin" id="tEt-bC-hJb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gGX-nN-VhD"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="xAf-eS-P28" id="rvv-rW-gJd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7I-6l-rT0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="846.9265367316342"/>
         </scene>
         <!--Dog Table View Controller-->
         <scene sceneID="Wzc-LY-Neh">
